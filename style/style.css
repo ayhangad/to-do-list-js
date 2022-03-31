@@ -1,0 +1,20 @@
+*{
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    height: 48px;
+    margin: 24px auto;
+    width: auto;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+}
+main{
+    width: auto;
+    max-width: 994px;
+    margin: 0 auto;
+}
