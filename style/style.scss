@@ -1,0 +1,169 @@
+$primary: #7f57f1;
+$primaryHover: #9474eb; 
+$white: #ffffff;
+$darker: #333333;
+$grey: #8c879a;
+$border-smooth: #f0eef4;
+$background: #fefdfe;
+
+$card-shadow: #17064709;
+
+* {
+    font-family: "Rubik", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    background-color: $background;
+    height: 100%;
+
+}
+
+.header {
+    display: flex;
+    height: 48px;
+    margin: 24px auto;
+    width: auto;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+}
+main {
+    width: auto;
+    max-width: 994px;
+    margin: 0 auto;
+}
+.new-task{
+    width: fit-content;
+    border: none;
+    background-color: $primary;
+    color: $white;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+}
+.new-task:hover{
+    background-color: $primaryHover ;
+    cursor: pointer;
+}
+
+.upper-title{
+    color: $primary;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0 0 8px 0;
+    letter-spacing: 0.25px;
+}
+.title{
+    margin: 0 0 40px 0;
+    color: $darker;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+
+}
+.card {
+    background-color: $white;
+    border-radius: 20px;
+    box-shadow: 4px 0 16px 2px $card-shadow;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+}
+.card-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+
+}
+.card-top-right{
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+.card-title{
+    color: $darker;
+    font-size: 24px;
+    font-weight: 600;
+}
+.card-date-time{
+    background-color: $border-smooth;
+    color: $grey;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.options{
+    margin-left: 12px;
+    border: none;
+    background: none;
+    color: $grey;
+    font-size: 24px;
+}
+.options:hover{
+    cursor: pointer;
+}
+.task-content{
+    max-width: 690px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 300;
+    color: $grey;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    margin: 0 0 18px 0;
+}
+.card-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.days-left-bar{
+    max-width: 524px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.days-left{
+    font-size: 14px;
+    font-weight: 500;
+    color: $grey;
+}
+.progress-bar{
+    width: 440px;
+    max-width: 440px;
+    height: 6px;
+    margin-left: 10px;
+    border-radius: 30px;
+    background-color: $primary;
+}
+.details{
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: $grey;
+}
+.details i{
+    font-size: 20px;
+}
+.details:hover{
+    cursor: pointer;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 32px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
