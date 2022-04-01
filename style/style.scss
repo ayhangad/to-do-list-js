@@ -15,7 +15,6 @@ $card-shadow: #17064709;
 }
 body {
     background-color: $background;
-    height: 100%;
 
 }
 
@@ -65,6 +64,7 @@ main {
 }
 .card {
     background-color: $white;
+    margin: 0 0 30px 0;
     border-radius: 20px;
     box-shadow: 4px 0 16px 2px $card-shadow;
     padding: 24px 32px;
@@ -158,12 +158,38 @@ main {
     cursor: pointer;
 }
 .footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin: 32px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.footer-text .name{
+    font-size: 14px;
+    font-weight: 500;
+    color: $darker;
+    margin-right: 6px;
+}
+.footer-text .year{
+    font-size: 14px;
+    font-weight: 500;
+    color: $grey;
+}
+.footer-social{
+    display: flex;
+    width: fit-content;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.footer-link{
+    font-size: 20px;
+    padding: 6px;
+    margin: 6px;
+    border-radius: 6px;
+    color: $grey;
+}
+.footer-link:hover{
+    color: $primary;
+    background-color: #ECE7FC;
+
 }
