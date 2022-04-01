@@ -17,7 +17,7 @@
 <body>
     <header class="header">
         <div class="logo"><img src="public/Logo.svg" alt=""></div>
-        <button class="new-task">Yeni Hedef <i class="uil uil-plus"></i></button>
+        <button onclick="createTask()" id="new-task" class="buttons">Yeni Hedef <i class="uil uil-plus"></i></button>
     </header>
     <main>
         <section>
@@ -99,11 +99,43 @@
             <span class="name">Aykhan Gadirli</span> <span class="year">©2022</span>
         </div>
         <div class="footer-social">
-            <a class="footer-link" href=""><i class="uil uil-github"></i></a>
-            <a class="footer-link" href=""><i class="uil uil-linkedin"></i></a>
-            <a class="footer-link" href=""><i class="uil uil-twitter"></i></a>
+            <a class="footer-link" href="https://github.com/ayhangad" target="_blank"><i class="uil uil-github"></i></a>
+            <a class="footer-link" href="https://www.linkedin.com/in/ayhangad/" target="_blank"><i
+                    class="uil uil-linkedin"></i></a>
+            <a class="footer-link" href="https://twitter.com/ayhangad" target="_blank"><i
+                    class="uil uil-twitter"></i></a>
         </div>
     </footer>
+    <div id="modal" class="bg-modal">
+        <div class="modal-content">
+            <div class="modal-top">
+                <h1 class="title margin-0">
+                    Yeni hedef ekle
+                </h1>
+                <button onclick="closeModal()" class="close">Kapat <i class="uil uil-times"></i></button>
+            </div>
+            <div class="modal-inputs">
+                <label class="labels" for="input">Başlık</label>
+                <input required placeholder="Hedefiniz için başlık giriniz" class="inputs" type="text" id="input">
+                <label class="labels" for="textarea">Açıklama</label>
+                <textarea required placeholder="Yapılacak hedefiniz için açıklama giriniz" class="inputs"
+                    id="textarea"></textarea>
+            </div>
+            <div class="modal-bottom">
+                <div class="date-div">
+                    <label for="date-input" class="labels">Hedef tarih</label>
+                    <input required type="date" id="date-input">
+                </div>
+                <div class="time-div">
+                    <label for="time-input" class="labels">Saat</label>
+                    <input required type="time" id="time-input">
+                </div>
+
+                <button type="submit" class="buttons button-flex-end">Kaydet</button>
+            </div>
+
+        </div>
+    </div>
 
 
 

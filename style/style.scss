@@ -1,5 +1,5 @@
 $primary: #7f57f1;
-$primaryHover: #9474eb; 
+$primaryHover: #906eed; 
 $white: #ffffff;
 $darker: #333333;
 $grey: #8c879a;
@@ -15,13 +15,14 @@ $card-shadow: #17064709;
 }
 body {
     background-color: $background;
+    transition: opacity 2s ease-in;
 
 }
 
 .header {
     display: flex;
     height: 48px;
-    margin: 24px auto;
+    margin: 24px auto 56px;
     width: auto;
     max-width: 1200px;
     justify-content: space-between;
@@ -32,8 +33,9 @@ main {
     max-width: 994px;
     margin: 0 auto;
 }
-.new-task{
+.buttons{
     width: fit-content;
+    height: 48px;
     border: none;
     background-color: $primary;
     color: $white;
@@ -41,10 +43,13 @@ main {
     font-size: 18px;
     font-weight: 500;
     padding: 10px 20px;
+    transition: 400ms ease-in-out;
 }
-.new-task:hover{
+.buttons:hover{
     background-color: $primaryHover ;
+    outline: 4px solid #ECE7FC;
     cursor: pointer;
+    transition: 400ms ease-in-out;
 }
 
 .upper-title{
@@ -158,6 +163,7 @@ main {
     cursor: pointer;
 }
 .footer{
+    margin: 120px 0 32px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,4 +198,106 @@ main {
     color: $primary;
     background-color: #ECE7FC;
 
+}
+
+
+//MODAL SECTION
+
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content{
+    width: 656px;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 32px;
+    background-color: $white;
+}
+
+.modal-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20px 0;
+}
+.close{
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    background: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: $grey;
+}
+.close i{
+    font-size: 20px;
+}
+.margin-0{
+    margin: 0;
+}
+
+.modal-content input, label {
+    display: block;
+}
+.labels{
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 0 4px 0;
+    color: $grey;
+}
+.inputs{
+    width: 100%;
+    margin: 0 0 20px 0;
+    resize: none;
+    border: 1px solid $grey;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    color: $darker;
+}
+.inputs::placeholder{
+    font-size: 18px;
+    font-weight: 400;
+    color: $grey;
+}
+#textarea{
+    height: 192px;
+}
+.modal-bottom{
+    display: flex;
+    align-items: flex-end;
+}
+#date-input, #time-input{
+    height: 48px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid $grey;
+    font-size: 18px;
+    font-weight: 400;
+    color: $darker;
+    padding: 15px;
+}
+.date-div, .time-div{
+    margin-right: 30px;
+}
+.button-flex-end{
+    margin-left: auto;
+}
+
+@media screen and (max-width:1224px){
+    .logo{
+        margin-left: 12px;
+    }
+    #new-task{
+        margin-right: 12px;
+    }
 }
