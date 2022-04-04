@@ -76,6 +76,10 @@ main {
     display: flex;
     flex-direction: column;
 }
+.card:hover{
+    outline: 4px solid $card-shadow;
+    box-shadow: 4px 0 16px 8px $card-shadow;
+}
 .card-top{
     display: flex;
     justify-content: space-between;

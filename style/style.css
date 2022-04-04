@@ -89,6 +89,12 @@ main {
           flex-direction: column;
 }
 
+.card:hover {
+  outline: 4px solid #17064709;
+  -webkit-box-shadow: 4px 0 16px 8px #17064709;
+          box-shadow: 4px 0 16px 8px #17064709;
+}
+
 .card-top {
   display: -webkit-box;
   display: -ms-flexbox;
