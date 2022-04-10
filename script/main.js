@@ -6,52 +6,52 @@ function createTask() {
 }
 
 
-const baslik = document.getElementById('inputBaslik');
-const aciklama = document.getElementById('inputHedefAciklama');
-const dateInput = document.getElementById('date-input');
-const timeInput = document.getElementById('time-input');
-const saveButton = document.getElementById('save-button');
+let baslik = document.getElementById('inputBaslik');
+let aciklama = document.getElementById('inputHedefAciklama');
+let dateInput = document.getElementById('date-input');
+let timeInput = document.getElementById('time-input');
+let saveButton = document.getElementById('save-button');
 
+let card = document.createElement("div")
+card.classList.add('card')
+let cardTop = document.createElement('div')
+cardTop.classList.add('card-top')
+let cardTitle = document.createElement('h2')
+cardTitle.classList.add('card-title')
+let cardTopRight = document.createElement('div')
+cardTopRight.classList.add('card-top-right')
+let cardDateTime = document.createElement('div')
+cardDateTime.classList.add('card-date-time')
+let spanDate = document.createElement('span')
+spanDate.classList.add('date')
+let spanTime = document.createElement('span')
+spanTime.classList.add('time')
+let optionsButton = document.createElement('i')
+optionsButton.classList.add('options', 'uil', 'uil-ellipsis-h')
+let taskContent = document.createElement('p')
+taskContent.classList.add('task-content')
+let cardBottom = document.createElement('div')
+cardBottom.classList.add('card-bottom')
+let daysLeftBar = document.createElement('div')
+daysLeftBar.classList.add('days-left-bar')
+let daysLeft = document.createElement('span')
+daysLeft.classList.add('days-left')
+let progressBar = document.createElement('div')
+progressBar.classList.add('progress-bar')
+let detailsButton = document.createElement('button')
+detailsButton.classList.add('details')
+let detailsIcon = document.createElement('i')
+detailsIcon.classList.add('uil', 'uil-arrow-down')
+/*
+let baslikValue = baslik.value
+let aciklamaValue = aciklama.value
+let dateInputValue = dateInput.value
+let timeInputValue = timeInput.value
+*/
 
-
-creatingCard = () => {
-    const baslikValue = baslik.value
-    const aciklamaValue = aciklama.value
-    const dateInputValue = dateInput.value
-    const timeInputValue = timeInput.value
+function creatingCard() {
 
     //CREATING CARD ELEMENTS
-    const card = document.createElement("div")
-    card.classList.add('card')
-    const cardTop = document.createElement('div')
-    cardTop.classList.add('card-top')
-    const cardTitle = document.createElement('h2')
-    cardTitle.classList.add('card-title')
-    const cardTopRight = document.createElement('div')
-    cardTopRight.classList.add('card-top-right')
-    const cardDateTime = document.createElement('div')
-    cardDateTime.classList.add('card-date-time')
-    const spanDate = document.createElement('span')
-    spanDate.classList.add('date')
-    const spanTime = document.createElement('span')
-    spanTime.classList.add('time')
-    const optionsButton = document.createElement('i')
-    optionsButton.classList.add('options', 'uil', 'uil-ellipsis-h')
-    const taskContent = document.createElement('p')
-    taskContent.classList.add('task-content')
-    const cardBottom = document.createElement('div')
-    cardBottom.classList.add('card-bottom')
-    const daysLeftBar = document.createElement('div')
-    daysLeftBar.classList.add('days-left-bar')
-    const daysLeft = document.createElement('span')
-    daysLeft.classList.add('days-left')
-    const progressBar = document.createElement('div')
-    progressBar.classList.add('progress-bar')
-    const detailsButton = document.createElement('button')
-    detailsButton.classList.add('details')
-    const detailsIcon = document.createElement('i')
-    detailsIcon.classList.add('uil', 'uil-arrow-down')
-
     card.appendChild(cardTop)
     card.appendChild(taskContent)
     card.appendChild(cardBottom)
@@ -59,5 +59,4 @@ creatingCard = () => {
     cardTitle.innerText = baslikValue
     cardTop.appendChild(cardTopRight)
 }
-saveButton.addEventListener("click", creatingCard);
 
