@@ -24,7 +24,7 @@
             <h5 class="upper-title">HEDEFLERİNİZ</h5>
             <h1 class="title">Son eklediğiniz hedefler</h1>
         </section>
-        <section class="content">
+        <section class="content" id="contents">
             <div class="card">
                 <div class="card-top">
                     <h2 class="card-title">Yapılacak herhangi bir şey</h2>
@@ -72,10 +72,11 @@
             </div>
             <div class="modal-inputs">
                 <label class="labels" for="input">Başlık</label>
-                <input required placeholder="Hedefiniz için başlık giriniz" class="inputs" type="text" id="inputBaslik">
+                <input required placeholder="Hedefiniz için başlık giriniz" class="inputs" type="text" id="inputBaslik"
+                    onchange="onChange()">
                 <label class="labels" for="textarea">Açıklama</label>
-                <textarea required placeholder="Yapılacak hedefiniz için açıklama giriniz" id="inputHedefAciklama" class="inputs"
-                    id="textarea"></textarea>
+                <textarea required placeholder="Yapılacak hedefiniz için açıklama giriniz" id="inputHedefAciklama"
+                    class="inputs" id="textarea"></textarea>
             </div>
             <div class="modal-bottom">
                 <div class="date-div">
@@ -87,7 +88,8 @@
                     <input required type="time" id="time-input">
                 </div>
 
-                <button onclick="creatingCard()" type="button" id="save-button" class="buttons button-flex-end">Kaydet</button>
+                <button onclick="creatingCard()" type="button" id="save-button"
+                    class="buttons button-flex-end">Kaydet</button>
             </div>
 
         </div>

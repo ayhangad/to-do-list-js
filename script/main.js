@@ -12,6 +12,7 @@ let dateInput = document.getElementById('date-input');
 let timeInput = document.getElementById('time-input');
 let saveButton = document.getElementById('save-button');
 
+/*
 let card = document.createElement("div")
 card.classList.add('card')
 let cardTop = document.createElement('div')
@@ -42,21 +43,46 @@ let detailsButton = document.createElement('button')
 detailsButton.classList.add('details')
 let detailsIcon = document.createElement('i')
 detailsIcon.classList.add('uil', 'uil-arrow-down')
-/*
-let baslikValue = baslik.value
-let aciklamaValue = aciklama.value
-let dateInputValue = dateInput.value
-let timeInputValue = timeInput.value
 */
 
 function creatingCard() {
+    let baslikValue = baslik.value
+    let aciklamaValue = aciklama.value
+    let dateInputValue = dateInput.value
+    let timeInputValue = timeInput.value
+    
+    var myhtml= '<div class="card">' +
+    '<div class="card-top"> ' +
+        '<h2 class="card-title">'+baslikValue+'</h2>' + 
+        '<div class="card-top-right">' +
+            '<div class="card-date-time">' +
+                '<span class="date">'+ dateInputValue + '</span> / ' +
+                '<span class="time">'+timeInputValue+ '</span>' +
+            ' </div> ' +
+            '<i class="options uil uil-ellipsis-h"></i> ' +
+         '</div>' +
+    '</div>' +
+    '<p class="task-content">'+aciklamaValue+'</p>'+
+    '<div class="card-bottom">'+
+        '<div class="days-left-bar">' +
+            '<span class="days-left">3 gün kaldı</span>'+
+           ' <div class="progress-bars"></div>'+
+        '</div>'+
+        '<button class="details">Detaylar<i class="uil uil-arrow-down"></i></button>'+
+    '</div>'+
+    '</div>'
+    const content = document.getElementById("contents")
+    content.innerHTML += myhtml
+
+    
+    
 
     //CREATING CARD ELEMENTS
-    card.appendChild(cardTop)
-    card.appendChild(taskContent)
-    card.appendChild(cardBottom)
-    cardTop.appendChild(cardTitle)
-    cardTitle.innerText = baslikValue
-    cardTop.appendChild(cardTopRight)
-}
+    // card.appendChild(cardTop)
+    // card.appendChild(taskContent)
+    // card.appendChild(cardBottom)
+    // cardTop.appendChild(cardTitle)
+    // cardTitle.innerText = baslikValue
+    // cardTop.appendChild(cardTopRight)
 
+}
