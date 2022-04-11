@@ -3,6 +3,7 @@ function closeModal() {
 }
 function createTask() {
     document.getElementById("modal").style.display = "flex"
+    baslikValue = ''
 }
 
 
@@ -66,17 +67,14 @@ function creatingCard() {
     '<div class="card-bottom">'+
         '<div class="days-left-bar">' +
             '<span class="days-left">3 gün kaldı</span>'+
-           ' <div class="progress-bars"></div>'+
+           ' <div class="progress-bar"></div>'+
         '</div>'+
         '<button class="details">Detaylar<i class="uil uil-arrow-down"></i></button>'+
     '</div>'+
     '</div>'
     const content = document.getElementById("contents")
     content.innerHTML += myhtml
-
-    
-    
-
+    document.getElementById("modal").style.display = "none" 
     //CREATING CARD ELEMENTS
     // card.appendChild(cardTop)
     // card.appendChild(taskContent)
